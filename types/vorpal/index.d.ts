@@ -74,7 +74,7 @@ declare namespace Vorpal {
 
     class CommandInstance {
         log(value: string, ...values: string[]): void;
-        prompt(prompt: object | ReadonlyArray<object>): Promise<object>;
+        prompt<T = { [key: string]: any}>(prompt: object | ReadonlyArray<object>): Promise<T>;
         delimiter(value: string): void;
     }
 }
